@@ -4,163 +4,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>VYRA Products</title>
-
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .product-price { margin: 10px 0; font-weight: 700; font-size: 18px; }
+        .qty-row { display: flex; gap: 10px; align-items: center; margin-top: 14px; }
+        .qty-row input { width: 65px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+        .add-cart { border: 0; padding: 11px 16px; border-radius: 8px; cursor: pointer; font-weight: 700; }
+        .cart-box { max-width: 1100px; margin: 30px auto 60px; padding: 20px; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; }
+        .cart-item { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .cart-actions { display: flex; gap: 8px; align-items: center; }
+        .cart-actions button { padding: 6px 10px; cursor: pointer; }
+        .cart-total { margin-top: 20px; font-size: 22px; font-weight: 800; }
+        .checkout-btn { margin-top: 15px; width: 100%; padding: 14px; border: 0; border-radius: 10px; font-weight: 800; cursor: pointer; }
+        .empty-cart { opacity: .7; }
+    </style>
 </head>
 
 <body class="products-page">
 
     <nav class="products-nav">
-
         <a href="index.html" class="products-logo">VYRA</a>
-
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="products.html" class="active">Products</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
         </div>
-
     </nav>
 
     <main class="catalog">
 
         <section class="catalog-heading">
             <h1>Products</h1>
-
-            <p class="catalog-description">
-                Explore the VYRA range.
-            </p>
+            <p class="catalog-description">Explore the VYRA range.</p>
         </section>
 
         <section class="product-grid">
 
             <article class="product-card">
-
                 <span class="stock-badge">AVAILABLE</span>
-
                 <div class="product-image">
-                    <img src="images/vyra-5.png"
-                         alt="VYRA 5MG"
-                         class="product-image-real">
+                    <img src="images/vyra-5.png" alt="VYRA 5MG" class="product-image-real">
                 </div>
-
                 <div class="product-info">
                     <h2>VYRA 5MG</h2>
-
-                    <p class="product-detail">
-                        Premium presentation
-                    </p>
-
-                    <a href="#" class="view-product">
-                        View Details →
-                    </a>
+                    <p class="product-detail">Premium presentation</p>
+                    <p class="product-price">RM85</p>
+                    <div class="qty-row">
+                        <input type="number" id="qty-vyra5" value="0" min="0">
+                        <button class="add-cart" onclick="addToCart('VYRA 5MG', 85, 'qty-vyra5')">Add to Cart</button>
+                    </div>
                 </div>
-
             </article>
 
             <article class="product-card">
-
                 <span class="stock-badge">AVAILABLE</span>
-
                 <div class="product-image">
-                    <img src="images/vyra-10.png"
-                         alt="VYRA 10MG"
-                         class="product-image-real">
+                    <img src="images/vyra-10.png" alt="VYRA 10MG" class="product-image-real">
                 </div>
-
                 <div class="product-info">
                     <h2>VYRA 10MG</h2>
-
-                    <p class="product-detail">
-                        Minimal presentation
-                    </p>
-
-                    <a href="#" class="view-product">
-                        View Details →
-                    </a>
+                    <p class="product-detail">Minimal presentation</p>
+                    <p class="product-price">RM97</p>
+                    <div class="qty-row">
+                        <input type="number" id="qty-vyra10" value="0" min="0">
+                        <button class="add-cart" onclick="addToCart('VYRA 10MG', 97, 'qty-vyra10')">Add to Cart</button>
+                    </div>
                 </div>
-
             </article>
 
             <article class="product-card">
-
                 <span class="stock-badge">AVAILABLE</span>
-
                 <div class="product-image">
-                    <img src="images/vyra-15.png"
-                         alt="VYRA 15MG"
-                         class="product-image-real">
+                    <img src="images/vyra-15.png" alt="VYRA 15MG" class="product-image-real">
                 </div>
-
                 <div class="product-info">
                     <h2>VYRA 15MG</h2>
-
-                    <p class="product-detail">
-                        Developed with precision
-                    </p>
-
-                    <a href="#" class="view-product">
-                        View Details →
-                    </a>
+                    <p class="product-detail">Developed with precision</p>
+                    <p class="product-price">RM120</p>
+                    <div class="qty-row">
+                        <input type="number" id="qty-vyra15" value="0" min="0">
+                        <button class="add-cart" onclick="addToCart('VYRA 15MG', 120, 'qty-vyra15')">Add to Cart</button>
+                    </div>
                 </div>
-
             </article>
 
             <article class="product-card">
-
                 <span class="stock-badge">AVAILABLE</span>
-
                 <div class="product-image">
-                    <img src="images/vyra-20.png"
-                         alt="VYRA 20MG"
-                         class="product-image-real">
+                    <img src="images/vyra-20.png" alt="VYRA 20MG" class="product-image-real">
                 </div>
-
                 <div class="product-info">
                     <h2>VYRA 20MG</h2>
-
-                    <p class="product-detail">
-                        Refined presentation
-                    </p>
-
-                    <a href="#" class="view-product">
-                        View Details →
-                    </a>
+                    <p class="product-detail">Refined presentation</p>
+                    <p class="product-price">RM140</p>
+                    <div class="qty-row">
+                        <input type="number" id="qty-vyra20" value="0" min="0">
+                        <button class="add-cart" onclick="addToCart('VYRA 20MG', 140, 'qty-vyra20')">Add to Cart</button>
+                    </div>
                 </div>
-
             </article>
 
             <article class="product-card">
-
                 <span class="stock-badge">AVAILABLE</span>
-
                 <div class="product-image">
-                    <img src="images/vyra-30.png"
-                         alt="VYRA 30MG"
-                         class="product-image-real">
+                    <img src="images/vyra-30.png" alt="VYRA 30MG" class="product-image-real">
                 </div>
-
                 <div class="product-info">
                     <h2>VYRA 30MG</h2>
-
-                    <p class="product-detail">
-                        Premium presentation
-                    </p>
-
-                    <a href="#" class="view-product">
-                        View Details →
-                    </a>
+                    <p class="product-detail">Premium presentation</p>
+                    <p class="product-price">RM140</p>
+                    <div class="qty-row">
+                        <input type="number" id="qty-vyra30" value="0" min="0">
+                        <button class="add-cart" onclick="addToCart('VYRA 30MG', 140, 'qty-vyra30')">Add to Cart</button>
+                    </div>
                 </div>
-
             </article>
 
         </section>
 
+        <section class="cart-box">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <p class="empty-cart">Your cart is empty.</p>
+            </div>
+
+            <div class="cart-total">
+                Total: RM<span id="cart-total">0.00</span>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">
+                Proceed to Checkout
+            </button>
+        </section>
+
     </main>
 
-</body>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('vyraCart')) || [];
 
+        function saveCart() {
+            localStorage.setItem('vyraCart', JSON.stringify(cart));
+        }
+
+        function addToCart(name, price, qtyId) {
+            const qtyInput = document.getElementById(qtyId);
+            const qty = Math.max(0, parseInt(qtyInput.value) || 0);
+
+            if (qty === 0) {
+                return;
+            }
+
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.qty += qty;
+            } else {
+                cart.push({ name, price, qty });
+            }
+
+            qtyInput.value = 0;
+            saveCart();
+            renderCart();
+        }
+
+        function changeQty(index, amount) {
+            cart[index].qty += amount;
+
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+
+            saveCart();
+            renderCart();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            saveCart();
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+                cartTotal.textContent = '0.00';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.qty;
+                total += subtotal;
+
+                html += `
+                    <div class="cart-item">
+                        <div>
+                            <strong>${item.name}</strong><br>
+                            RM${item.price.toFixed(2)} × ${item.qty}
+                        </div>
+
+                        <div class="cart-actions">
+                            <button onclick="changeQty(${index}, -1)">−</button>
+                            <span>${item.qty}</span>
+                            <button onclick="changeQty(${index}, 1)">+</button>
+                            <button onclick="removeItem(${index})">Remove</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            cartItems.innerHTML = html;
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Cart masih kosong.');
+                return;
+            }
+
+            window.location.href = 'checkout.html';
+        }
+
+        renderCart();
+    </script>
+
+</body>
 </html>

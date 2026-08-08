@@ -17,10 +17,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   HOME PAGE
-========================= */
-
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -113,12 +109,11 @@ h1 {
     transform: translateY(-3px);
 }
 
-/* HOME - TABLET */
-
 @media (max-width: 900px) {
 
     .hero {
         padding: 40px 7%;
+
         background-position: 65% center;
     }
 
@@ -138,9 +133,8 @@ h1 {
         font-size: 17px;
         letter-spacing: 5px;
     }
-}
 
-/* HOME - PHONE */
+}
 
 @media (max-width: 600px) {
 
@@ -190,8 +184,8 @@ h1 {
         font-size: 14px;
         letter-spacing: 6px;
     }
-}
 
+}
 
 /* =========================
    PRODUCTS PAGE
@@ -356,19 +350,17 @@ h1 {
         );
 }
 
-.product-image-real {
-    width: 360px;
-    max-width: 100%;
+.product-image-real{
+    width:360px;
+    max-width:100;
     height: auto;
-
-    display: block;
-    margin: auto;
-
-    transition: 0.35s;
+    display:block;
+    margin:auto;
+    transition:.35s;
 }
 
-.product-card:hover .product-image-real {
-    transform: scale(1.05);
+.product-card:hover .product-image-real{
+    transform:scale(1.05);
 }
 
 .product-info {
@@ -412,8 +404,6 @@ h1 {
     transform: translateX(5px);
 }
 
-/* PRODUCTS - TABLET */
-
 @media (max-width: 900px) {
 
     .products-nav {
@@ -432,9 +422,8 @@ h1 {
     .product-grid {
         grid-template-columns: 1fr;
     }
-}
 
-/* PRODUCTS - PHONE */
+}
 
 @media (max-width: 600px) {
 
@@ -468,4 +457,5 @@ h1 {
     .product-info h2 {
         font-size: 24px;
     }
+
 }

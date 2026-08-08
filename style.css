@@ -421,7 +421,7 @@ h1 {
     }
 
     .nav-links {
-        display: none;
+        display: flex;
     }
 
     .catalog {

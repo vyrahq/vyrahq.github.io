@@ -1,44 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VYRA</title>
+  <title>VYRA</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111827;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #263244;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      margin: 0 0 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .shop-btn {
+      display: inline-block;
+      padding: 15px 28px;
+      background: white;
+      color: #111827;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .shop-btn:hover {
+      opacity: 0.9;
+    }
+
+    .info-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 7%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .info-card {
+      padding: 28px;
+      border: 1px solid #374151;
+      border-radius: 12px;
+    }
+
+    .info-card h3 {
+      margin-top: 0;
+    }
+
+    .info-card p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #263244;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .info-section {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <main class="hero">
+  <nav class="navbar">
 
-        <div class="hero-content">
+    <a href="index.html" class="logo">VYRA</a>
 
-            <div class="logo">
-                VYRA
-            </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-            <h1>
-                Great Things<br>
-                Take Time.
-            </h1>
+  </nav>
 
-            <div class="values">
-                <p>PATIENCE.</p>
-                <p>CONSISTENCY.</p>
-                <p>DISCIPLINE.</p>
-            </div>
 
-            <a href="products.html" class="explore-button">
-                EXPLORE
-            </a>
+  <section class="hero">
 
-        </div>
+    <div class="hero-content">
 
-    </main>
+      <h1>Welcome to VYRA</h1>
+
+      <p>
+        Simple ordering, secure payment and direct customer support.
+        Browse our available products and place your order online.
+      </p>
+
+      <a href="products.html" class="shop-btn">
+        Shop Products
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section class="info-section">
+
+    <div class="info-card">
+      <h3>Easy Ordering</h3>
+      <p>
+        Select your products, add them to cart and complete your order
+        directly through our website.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Simple Payment</h3>
+      <p>
+        Complete your payment using the payment method provided during checkout.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Customer Support</h3>
+      <p>
+        Need assistance? Contact us directly through WhatsApp for help with your order.
+      </p>
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 VYRA. All rights reserved.
+  </footer>
 
 </body>
-
 </html>

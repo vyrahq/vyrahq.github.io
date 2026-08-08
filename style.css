@@ -692,3 +692,29 @@ h1 {
     }
 
 }
+
+
+/* MOBILE NAVIGATION FIX */
+@media (max-width: 900px) {
+    .products-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        font-size: 9px;
+        letter-spacing: 1px;
+        white-space: nowrap;
+    }
+}

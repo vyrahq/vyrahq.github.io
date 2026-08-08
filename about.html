@@ -1,65 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About VYRA</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111827;
-      color: white;
-    }
+    <title>About | VYRA</title>
 
-    .about-wrap {
-      max-width: 900px;
-      margin: 80px auto;
-      padding: 30px;
-    }
-
-    .about-wrap h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .about-wrap p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #d1d5db;
-    }
-
-    .back-btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 22px;
-      background: white;
-      color: #111827;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="about-page">
 
-  <div class="about-wrap">
-    <h1>About VYRA</h1>
+    <nav class="products-nav">
 
-    <p>
-      VYRA is focused on providing a smooth, simple and reliable online shopping experience.
-      Our goal is to make browsing, ordering and payment as easy as possible for every customer.
-    </p>
+        <a href="index.html" class="products-logo">VYRA</a>
 
-    <p>
-      We are committed to clear communication, fast customer support and a simple ordering process.
-    </p>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
 
-    <a href="index.html" class="back-btn">Back to Home</a>
-  </div>
+    </nav>
+
+    <main class="about-section">
+
+        <div class="about-intro">
+
+            <p class="page-label">ABOUT VYRA</p>
+
+            <h1>
+                Built With
+                <span>Purpose.</span>
+            </h1>
+
+            <p class="about-lead">
+                VYRA is built around a simple belief:
+                quality, consistency and attention to detail matter.
+            </p>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+                <span class="about-number">01</span>
+
+                <h2>Quality</h2>
+
+                <p>
+                    Every product is selected with care and presented
+                    with a focus on quality and reliability.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <span class="about-number">02</span>
+
+                <h2>Consistency</h2>
+
+                <p>
+                    We believe good service comes from being consistent,
+                    clear and dependable from start to finish.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <span class="about-number">03</span>
+
+                <h2>Experience</h2>
+
+                <p>
+                    Our goal is to keep the ordering experience simple,
+                    smooth and easy for every customer.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
 
 </body>
+
 </html>

@@ -17,6 +17,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* =========================
+   HOME PAGE
+========================= */
+
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -109,11 +113,12 @@ h1 {
     transform: translateY(-3px);
 }
 
+/* HOME - TABLET */
+
 @media (max-width: 900px) {
 
     .hero {
         padding: 40px 7%;
-
         background-position: 65% center;
     }
 
@@ -133,8 +138,9 @@ h1 {
         font-size: 17px;
         letter-spacing: 5px;
     }
-
 }
+
+/* HOME - PHONE */
 
 @media (max-width: 600px) {
 
@@ -184,8 +190,8 @@ h1 {
         font-size: 14px;
         letter-spacing: 6px;
     }
-
 }
+
 
 /* =========================
    PRODUCTS PAGE
@@ -350,17 +356,19 @@ h1 {
         );
 }
 
-.product-image-real{
-    width:360px;
-    max-width:100;
+.product-image-real {
+    width: 360px;
+    max-width: 100%;
     height: auto;
-    display:block;
-    margin:auto;
-    transition:.35s;
+
+    display: block;
+    margin: auto;
+
+    transition: 0.35s;
 }
 
-.product-card:hover .product-image-real{
-    transform:scale(1.05);
+.product-card:hover .product-image-real {
+    transform: scale(1.05);
 }
 
 .product-info {
@@ -404,6 +412,8 @@ h1 {
     transform: translateX(5px);
 }
 
+/* PRODUCTS - TABLET */
+
 @media (max-width: 900px) {
 
     .products-nav {
@@ -422,8 +432,9 @@ h1 {
     .product-grid {
         grid-template-columns: 1fr;
     }
-
 }
+
+/* PRODUCTS - PHONE */
 
 @media (max-width: 600px) {
 
@@ -456,6 +467,228 @@ h1 {
 
     .product-info h2 {
         font-size: 24px;
+    }
+}
+
+/* =========================
+   ABOUT + CONTACT PAGE
+========================= */
+
+.about-page,
+.contact-page {
+    min-height: 100vh;
+    background: #050505;
+    color: #f4f4f4;
+}
+
+.about-section,
+.contact-section {
+    width: min(1250px, 90%);
+    margin: 0 auto;
+    padding: 90px 0 120px;
+}
+
+.page-label {
+    margin-bottom: 22px;
+
+    color: #d8c08c;
+
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.about-intro,
+.contact-heading {
+    max-width: 850px;
+    margin-bottom: 70px;
+}
+
+.about-intro h1,
+.contact-heading h1 {
+    margin: 0 0 30px;
+
+    color: #f4f4f4;
+
+    font-size: clamp(58px, 8vw, 105px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.about-intro h1 span,
+.contact-heading h1 span {
+    color: #d8c08c;
+}
+
+.about-lead,
+.contact-heading > p:last-child {
+    max-width: 700px;
+
+    color: #999999;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-grid,
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.about-card,
+.contact-card {
+    min-height: 300px;
+    padding: 38px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.012)
+        );
+}
+
+.about-number,
+.contact-small {
+    display: block;
+    margin-bottom: 55px;
+
+    color: #d8c08c;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.about-card h2,
+.contact-card h2 {
+    margin-bottom: 18px;
+
+    color: #f4f4f4;
+
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.about-card p,
+.contact-text {
+    color: #929292;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-card {
+    min-height: 340px;
+}
+
+.contact-button {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 17px 28px;
+
+    border: 1px solid #d8c08c;
+    border-radius: 999px;
+
+    color: #d8c08c;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #d8c08c;
+    color: #050505;
+}
+
+.contact-link {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    color: #d8c08c;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+
+    .about-section,
+    .contact-section {
+        padding-top: 65px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .about-section,
+    .contact-section {
+        width: 88%;
+        padding: 55px 0 90px;
+    }
+
+    .about-intro,
+    .contact-heading {
+        margin-bottom: 45px;
+    }
+
+    .about-intro h1,
+    .contact-heading h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .about-lead,
+    .contact-heading > p:last-child {
+        font-size: 15px;
+    }
+
+    .about-card,
+    .contact-card {
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .about-number,
+    .contact-small {
+        margin-bottom: 35px;
+    }
+
+    .about-card h2,
+    .contact-card h2 {
+        font-size: 26px;
     }
 
 }

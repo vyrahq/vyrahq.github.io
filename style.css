@@ -459,3 +459,9 @@ h1 {
     }
 
 }
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 560px;
+    }
+}
